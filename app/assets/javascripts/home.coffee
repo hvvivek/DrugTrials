@@ -6,15 +6,29 @@ next_index = 1;
 prev_index = 4;
 max_index = 0;
 
-$(document).ready ->
+$(window).load ->
             console.log("DOM Ready")
+            
+            
             $("#carousel .carousel-image").first().css({"display":"block"})
             max_index = $("#carousel .carousel-image").length
-
+            
+            console.log($("#info-container").height())
+            if ($("#carousel-container").height() < $("#info-container").height())
+                console.log("Here");
+                $("#carousel-container").css({"height":$("#info-container").height() + "px"});
+            else
+                $("#carousel-container").css({"height":"calc(100vh-80px-60px)"});
+                
             $border_bottom = $("#carousel").height() + "px solid rgba(1,1,1,0.8)";
             $border_right = $("#carousel").width() + "px solid transparent";
 
+            $border_right_white =  (60*$("#carousel").width()) / $("#carousel").height();
+            $border_right_white = $border_right_white + "px solid transparent";
+
             $("#triangle-bottomleft").css({"border-bottom":$border_bottom, "border-right":$border_right})
+            $("#triangle-bottomleft-white").css({"border-right":$border_right_white})
+
             console.log(max_index)
             prev_index = max_index-1;
             $("#carousel-next").on "click", ->
@@ -70,7 +84,14 @@ changeValues = (num) ->
 
 active_func_next = () ->
 $(window).on "resize orientationChange", -> 
+                            if ($("#carousel-container").height() < $("#info-container").height())
+                                console.log("Here");
+                                $("#carousel-container").css({"height":$("#info-container").height() + "px"});
+                            else
+                                $("#carousel-container").css({"height":"calc(100vh-80px-60px)"});
                             $border_bottom = $("#carousel").height() + "px solid rgba(1,1,1,0.8)";
                             $border_right = $("#carousel").width() + "px solid transparent";
+                            $border_right_white =  (60*$("#carousel").width()) / $("#carousel").height();
+                            $border_right_white = $border_right_white + "px solid transparent";
                             $("#triangle-bottomleft").css({"border-bottom":$border_bottom, "border-right":$border_right})
-            
+                            $("#triangle-bottomleft-white").css({"border-right":$border_right_white})

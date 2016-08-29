@@ -7,15 +7,18 @@
 
 
     <section class="col-md-5" id="info-container">
-        <div class="sign-in-register col-md-12"><span class="pull-right"><a>Sign In</a> | <a> Register</a></span></div>
-        <h1 class="visible-xs visible-sm ">Find Clinical Trial</h1>
-        <h5 class="visible-xs visible-sm">Search for a Clinical Trial near you</h5>
+        <section id="title-bar">
+            <div class="sign-in-register col-md-12"><span class="pull-right clearfix"><a>Sign In</a> | <a> Register</a></span></div>
+            <h1 class="visible-xs visible-sm ">Find Clinical Trial</h1>
+            <h4 class="visible-xs visible-sm">Search for a Clinical Trial near you</h4>
 
-        <h1 class="text-center visible-md visible-lg">Find Clinical Trial</h1>
-        <h5 class="text-muted text-center visible-md visible-lg">Search for a Clinical Trial near you</h5>
-        <div class="col-md-12 col-lg-10 col-lg-offset-1 info-bar"></div>
-
-        <form class="col-md-10 col-md-offset-1">
+            <h1 class="text-center visible-md visible-lg">Find Clinical Trial</h1>
+            <h4 class="text-muted text-center visible-md visible-lg">Search for a Clinical Trial near you</h4>
+        </section>
+        
+        <section class="col-md-12 col-lg-10 col-lg-offset-1 info-bar"></section>
+        
+        <form class="col-md-10 col-md-offset-1"  id="search-form">
 
             <div class="form-group">
                 <label for="locationInput">Location</label>
@@ -32,11 +35,11 @@
             </div>
         </form>
 
-        <div class="col-md-12">
+        <div class="col-md-12" id="quick-link-icons">
             <div  class="col-md-4">
                 <div class="center-block" style="text-align:center">
                     <a href="#">
-                    <%= image_tag "cro", size: "80x60", class: "media-object center-block"%>
+                    <%= image_tag "cro", class: "media-object img-responsive-custom center-block"%>
                     <h5 class="media-heading">For CROs</h5>
                     </a>
                 </div>
@@ -45,7 +48,7 @@
             <div  class="col-md-4">
                 <div class="center-block" style="text-align:center">
                     <a href="#">
-                    <%= image_tag "physician", size: "80x60", class: "media-object center-block"%>
+                    <%= image_tag "physician", class: "media-object img-responsive-custom center-block"%>
                     <h5 class="media-heading">For Physicians</h5>
                     </a>
                 </div>
@@ -54,7 +57,7 @@
             <div  class="col-md-4">
                 <div class="center-block" style="text-align:center">
                     <a href="#">
-                    <%= image_tag "physician", size: "80x60", class: "media-object center-block"%>
+                    <%= image_tag "physician", class: "media-object img-responsive-custom center-block"%>
                     <h5 class="media-heading">For Volunteers</h5>
                     </a>
                 </div>
@@ -64,10 +67,6 @@
 
 </div>
 
-<footer class="footer">
-      <div class="container-fluid">
-        <div class="col-md-7"></div>
-        <div class="col-md-5" style="background-color: #0067AB; height: 60px"></div>
-      </div>
-    </footer>
+<%= render "footer" %>
+
 
