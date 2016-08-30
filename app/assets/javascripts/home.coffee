@@ -14,10 +14,10 @@ $(window).load ->
             max_index = $("#carousel .carousel-image").length
             
             console.log($("#info-container").height())
-            if ($("#carousel-container").height() < $("#info-container").height())
-                console.log("Here");
+            if ($("#carousel-container").height() < $("#info-container").height() && $(window).width() > 768)
+                console.log("here");
                 $("#carousel-container").css({"height":$("#info-container").height() + "px"});
-            else
+            else if($(window).width() > 768)
                 $("#carousel-container").css({"height":"calc(100vh-80px-60px)"});
                 
             $border_bottom = $("#carousel").height() + "px solid rgba(1,1,1,0.8)";
@@ -41,6 +41,11 @@ $(window).load ->
                                                 $("#carousel-previous").prop({"disabled":true})
                                                 console.log("Carousel Backward")
                                                 carouselBack()  
+            $("#title-bar .sign-in-register-link").on "click", ->
+                                                $(".flip-container").slideToggle(400);
+                                                $(".flip-container").removeClass("flipped");
+            $("#title-bar .flipper-link").on "click", ->
+                                                $(".flip-container").toggleClass("flipped");
 
 carouselNext = () ->
                     console.log("Moving to next image")   
@@ -84,11 +89,12 @@ changeValues = (num) ->
 
 active_func_next = () ->
 $(window).on "resize orientationChange", -> 
-                            if ($("#carousel-container").height() < $("#info-container").height())
-                                console.log("Here");
+                            $("#carousel-container").css({"height":""});
+                            if ($("#carousel-container").height() < $("#info-container").height() && $(window).width() > 768)
                                 $("#carousel-container").css({"height":$("#info-container").height() + "px"});
-                            else
+                            else if($(window).width() > 768)
                                 $("#carousel-container").css({"height":"calc(100vh-80px-60px)"});
+                                
                             $border_bottom = $("#carousel").height() + "px solid rgba(1,1,1,0.8)";
                             $border_right = $("#carousel").width() + "px solid transparent";
                             $border_right_white =  (60*$("#carousel").width()) / $("#carousel").height();

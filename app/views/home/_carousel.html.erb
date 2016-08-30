@@ -1,4 +1,4 @@
-<div id="carousel" class="col-xs-12">
+<div id="carousel" class="col-md-12">
     <img src="<%= asset_path "carousel-1" %>" alt="Carousel1" data-index='1' class="carousel-image active">
     
     <img src="<%= asset_path "carousel-2" %>" alt="Carousel2" data-index='2' class="carousel-image">
@@ -7,12 +7,28 @@
 
     <img src="<%= asset_path "carousel-4" %>" alt="Carousel4" data-index='4' class="carousel-image">
 
-    <div id="triangle-bottomleft">
+    <div class="hidden-xs hidden-sm" id="triangle-bottomleft">
     </div>
 
-    <div class="carousel-info-box">
-        <p>Are you interested in Alternative medicine?</p>
+    <div class="hidden-xs hidden-sm carousel-info-box">
+        <p>Alternative Medicine</p>
         <p>Find the solution to your problem through Alternative Medicine like Ayurveda , Yoga and Homeopathy </p>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg carousel-info-box-small">
+        <h1>Alternative Medicine</h1>
+        <h4>Find the solution to your problem through Alternative Medicine like Ayurveda , Yoga and Homeopathy </h4>
+    </div>
+
+    
+    <div class="visible-xs carousel-links">
+        <span class="">Sign | Register</span>
+    </div>
+    <div class="visible-xs carousel-links">
+        <span class="">Are you a CRO?</span>
+    </div>
+    <div class="visible-xs carousel-links">
+        <span class="">Are you a Physician?</span>
     </div>
 
     <button src="<%= asset_path "right-arrow" %>" alt="Carousel4" class="carousel-right-arrow" id="carousel-next">

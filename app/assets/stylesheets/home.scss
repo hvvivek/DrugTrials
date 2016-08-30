@@ -12,6 +12,17 @@ body{
     height: 100%;
 }
 
+#title-bar h2{
+    margin-bottom: 0;
+}
+#title-bar h5{
+    margin-top: 0;
+}
+#search-form input{
+    border: 1px solid #a0a0a0;
+    box-shadow: 1px 1px 8px #a0a0a0;
+}
+
 // NAVBAR
 
 #landing-navbar{
@@ -124,8 +135,7 @@ $width: calc((7/12)*100vw);
 
 //Info container
 
-#info-container h1{
-    margin-top: 5px;
+#info-container h2{
     font-weight: bold;
 }
 
@@ -136,10 +146,6 @@ $width: calc((7/12)*100vw);
     background-repeat: no-repeat;
     margin-top: 3vh;
     margin-bottom: 1vh;
-}
-
-#info-container > form{
-    margin-bottom: 5vh;
 }
 
 #info-container .sign-in-register{
@@ -153,9 +159,7 @@ $width: calc((7/12)*100vw);
     display: block;
 }
 
-#search-form{
-    margin-bottom: 2vh;
-}
+
 
 #search-form input{
     border-radius: 0;
@@ -164,8 +168,8 @@ $width: calc((7/12)*100vw);
 
 #landing-search{
     border-radius: 30px;
-    height: 35px;
-    font-size: 1.2vw;
+    height: 2.5em;
+    font-size: 1.2em;
     font-weight: 200;
     border: none;
     background-color: #009687;
@@ -174,7 +178,8 @@ $width: calc((7/12)*100vw);
 
 #landing-search + a{
     margin-top: calc(17px - 0.5vw);
-    font-size: 1vw;
+    font-size: 0.9em;
+    font-weight: bold;
     color:#0067AB;
 }
 
@@ -281,4 +286,135 @@ $width: calc((7/12)*100vw);
 
 .carousel-info-box p:last-child{
     font-size: 16px;
+}
+
+#carousel .carousel-info-box-small{
+    position: absolute;
+    height: auto;
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+    bottom: 0;
+    text-align: center;
+}
+
+//Sign In Flip form
+#title-bar .flip-container{
+    position:absolute;
+    right: 0px;
+    top: 25px;
+    background-color: white;
+    z-index: 2;
+    border:1px solid #808080;
+    border-radius:8px;
+    padding: 15px;
+    min-width: 200px;
+    height: 350px;
+    perspective: 400px;
+    display: none;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+#title-bar .front-face, .back-face{
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: white;
+    max-height: 100%;
+}
+
+#title-bar .front-face>a, .back-face>a{
+    font-size: 1em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.back-face{
+    transform: rotateY(180deg)
+}
+
+.flipped{
+        transform: rotateY(180deg);
+        transform-style: preserve-3d;
+        transition: transform 1s;
+}
+
+
+@media (min-width: 992px) {
+    #search-form{
+        margin-bottom: 2vh;
+    }
+ }
+
+ @media (min-width: 0px) and (max-width: 991px) {
+    #search-form{
+        min-height: 50vh;
+        margin-bottom: 2vh;
+        font-size: 12px;
+    }
+ }
+
+  @media (min-width: 0px) and (max-width: 768px) {
+    #carousel-container{
+        height: 75vw;
+    }
+
+    //Square images for mobile
+    #carousel-container img{
+        height: 100%;
+        width: 100%;
+    }
+
+    //Square images for mobile
+    #carousel-container h1{
+        font-size: 5vw;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    #carousel-container h4{
+        font-size: 3.5vw;
+        font-weight: 100;
+    }
+
+    #info-container h2{
+        font-size: 7vw;
+    }
+    #search-form{
+        padding:0;
+        margin-left: 4.167%;
+    }
+
+    footer{
+        font-size: 1em;
+    }
+
+    footer .site-links{
+        background-color: #0067AB;
+        font-size: 0.9em;
+    }
+
+    .site-links ul{
+        text-align: center;
+    } 
+
+    .site-links li{
+        padding: 5px;
+        border-bottom: 1px solid #2267EE;
+    }
+
+ }
+
+ //Mobile Only Componenets
+.carousel-links{
+    position: relative;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    clear: both;
+    width: 12em;
+    font-size: 3.7vw;
 }

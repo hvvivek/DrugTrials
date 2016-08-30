@@ -8,21 +8,74 @@
 
     <section class="col-md-5" id="info-container">
         <section id="title-bar">
-            <div class="sign-in-register col-md-12"><span class="pull-right clearfix"><a>Sign In</a> | <a> Register</a></span></div>
-            <h1 class="visible-xs visible-sm ">Find Clinical Trial</h1>
-            <h4 class="visible-xs visible-sm">Search for a Clinical Trial near you</h4>
+            <div class="hidden-xs sign-in-register col-md-12">
+                <span class="pull-right clearfix">
+                    <a class="sign-in-register-link">Sign In</a> | <a class="sign-in-register-link flipper-link"> Register</a>
+                </span>
+                <div class="flip-container col-md-5">
+                    <div class="front-face">
+                        <form class="col-md-12">
 
-            <h1 class="text-center visible-md visible-lg">Find Clinical Trial</h1>
-            <h4 class="text-muted text-center visible-md visible-lg">Search for a Clinical Trial near you</h4>
+                            <div class="form-group">
+                                <label for="userName">Username</label>
+                                <input type="username" class="form-control" id="userName" placeholder="Username">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="passWord">Password</label>
+                                <input type="password" class="form-control" id="passWord" placeholder="Password">
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-default col-md-8 col-md-offset-2" id="landing-search">Login</button>
+                            </div>
+                        </form>
+                        <a class="flipper-link col-md-12">Not a member? Register Here ></a>
+                    </div>
+                    <div class="back-face">
+                        <form class="col-md-12">
+
+                            <div class="form-group">
+                                <label for="email">Username</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="passWord">Password</label>
+                                <input type="password" class="form-control" id="passWord" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="passWord-confirm">Confirm Password</label>
+                                <input type="password-confirm" class="form-control" id="passWord-confirm" placeholder="Re-type Password">
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-default col-md-8 col-md-offset-2" id="landing-search">Register</button>
+                            </div>
+                        </form>
+                        <a class="flipper-link col-md-12">Already a member? Sign In Here ></a>
+                    </div>
+                </div>
+                
+            </div>
+            <h2 class="text-center visible-xs visible-sm col-xs-12">Find Clinical Trial</h2>
+            <h5 class="text-muted visible-xs visible-sm col-xs-12 text-center">Search for a Clinical Trial near you</h5>
+
+            <h2 class="text-center visible-md visible-lg">Find Clinical Trial</h2>
+            <h5 class="text-center text-muted text-center visible-md visible-lg">Search for a Clinical Trial near you</h5>
         </section>
         
-        <section class="col-md-12 col-lg-10 col-lg-offset-1 info-bar"></section>
+        <section class="hidden-xs hidden-sm col-md-12 col-lg-10 col-lg-offset-1 info-bar"></section>
         
-        <form class="col-md-10 col-md-offset-1"  id="search-form">
+        <form class="col-xs-11 
+                     col-sm-8 col-sm-offset-2 
+                     col-md-10 col-md-offset-1"  
+              id="search-form">
 
             <div class="form-group">
                 <label for="locationInput">Location</label>
-                <input type="location" class="form-control" id="locationInput" placeholder="Eg - New Delhi, India">
+                <input type="location" 
+                       class="form-control" 
+                       id="locationInput" 
+                       placeholder="Eg - New Delhi, India">
             </div>
 
             <div class="form-group">
@@ -30,12 +83,12 @@
                 <input type="condition" class="form-control" id="healthConditionInput" placeholder="Eg - Diabetes">
             </div>
             <div>
-                <button type="submit" class="btn btn-default col-md-5" id="landing-search">Search</button>
-                <a class="col-md-6">Advanced Search ></a>
+                <button type="submit" class="btn btn-default col-xs-5 col-xs-offset-1 col-md-5 col-md-offset-1" id="landing-search">Search</button>
+                <a class="col-xs-6 col-md-6 pull-right">Advanced Search ></a>
             </div>
         </form>
 
-        <div class="col-md-12" id="quick-link-icons">
+        <div class="col-md-12 hidden-xs hidden-sm" id="quick-link-icons">
             <div  class="col-md-4">
                 <div class="center-block" style="text-align:center">
                     <a href="#">
