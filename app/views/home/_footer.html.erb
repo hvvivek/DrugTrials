@@ -1,6 +1,12 @@
 <footer class="footer">
       <div class="container-fluid">
-        <div class="hidden-xs hidden-sm col-md-7"></div>
+        <div class="hidden-xs hidden-sm col-md-7 left-section">
+              <p class="col-md-6 col-md-offset-1">Connect with your treatment today</p>
+              <%= image_tag 'fb-icon', class: 'img-responsive col-md-1' %>
+              <%= image_tag 'gplus-icon', class: 'img-responsive col-md-1' %>
+              <%= image_tag 'twitter-icon', class: 'img-responsive col-md-1' %>
+              <%= image_tag 'linkedin-icon', class: 'img-responsive col-md-1' %>
+        </div>
         
         <div class="hidden-xs col-md-5 right-section" style="background-color: #0067AB; height: 60px">
           <div  class="col-md-3 hidden-xs hidden-sm" id="triangle-bottomleft-white">
@@ -17,10 +23,11 @@
               <li><a>Site Map</a></li>
             </ul>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3 footer-copyright">
             <ul>
-              <li><a>First Link</a></li>
-              <li><a>Second Link</a></li>
+              <li><%= image_tag 'MyCure_Logo_footer.png' %></li>
+              <li>Copyright(C) 2016 MyCure Inc.</li>
+              <li>All Rights Reserved</li>
             </ul>
           </div>
         </div>

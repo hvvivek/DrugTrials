@@ -31,6 +31,13 @@ body{
     margin-bottom: 0px;
 }
 
+#landing-navbar .sub-title{
+    float: left;
+    color: white;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
 #landing-navbar .navbar-brand{
     padding-left: 20px;
     padding-right: 20px;
@@ -93,8 +100,10 @@ footer > .container-fluid{
 
 footer ul{
     margin-top: 10px;
+    margin-bottom: 0px;
     list-style: none;
     color: white;
+    font-size: 0.75em;
 }
 
 footer ul a{
@@ -103,6 +112,20 @@ footer ul a{
 
 footer div:last-child{
     padding-left: 0;
+}
+
+footer .left-section p{
+    padding-top: 20px;
+    font-size: 1vw;
+}
+footer .left-section img{
+    position: relative;
+    padding-top: calc(10px);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 50px;
+    width: 50px;
+
 }
 
 #triangle-bottomleft-white {
@@ -114,6 +137,19 @@ footer div:last-child{
 	border-right: 60px solid transparent;
 }
 
+.footer-copyright li:first-child{
+    height: 20px;
+    font-size: 8px;
+}
+
+.footer-copyright li{
+    height: 15px;
+    font-size: 6px;
+}
+
+.footer-copyright img{
+    height: 20px;
+}
 //End Footer
 
 #main-content{
@@ -124,7 +160,7 @@ $height: calc(100vh - 80px - 60px);
 $width: calc((7/12)*100vw);
 #carousel-container{
     padding: 0px;
-    background-color: #808080;
+    background-color: #ffffff;
     background-repeat: no-repeat;
     background-size: 100% auto;
     height: $height;
@@ -164,6 +200,12 @@ $width: calc((7/12)*100vw);
 #search-form input{
     border-radius: 0;
     border-bottom-left-radius: 20px;
+}
+
+#search-form .location-placeholder{
+    position: absolute;
+    right: 6.5%;
+    top: 25px;
 }
 
 #landing-search{
@@ -269,6 +311,7 @@ $width: calc((7/12)*100vw);
 
 
 
+
 .carousel-info-box{
     position: absolute;
     height: auto;
@@ -276,16 +319,18 @@ $width: calc((7/12)*100vw);
     color: white;
     bottom: 0;
     margin-bottom: 2vh;
-    margin-left: 5vh;
+    margin-left: calc(20%);
+    text-align: center;
+    display: none;
 }
 
 .carousel-info-box p:first-child{
-    font-size: 22px;
+    font-size: 2.2vw;
     font-weight: 600;
 }
 
 .carousel-info-box p:last-child{
-    font-size: 16px;
+    font-size: 1.2vw;
 }
 
 #carousel .carousel-info-box-small{
@@ -295,6 +340,10 @@ $width: calc((7/12)*100vw);
     background-color: rgba(0,0,0,0.9);
     bottom: 0;
     text-align: center;
+}
+
+.active-info-box{
+    display: block;
 }
 
 //Sign In Flip form
@@ -341,22 +390,65 @@ $width: calc((7/12)*100vw);
 
 @media (min-width: 992px) {
     #search-form{
-        margin-bottom: 2vh;
+        margin-bottom: 4vh;
     }
- }
-
- @media (min-width: 0px) and (max-width: 991px) {
-    #search-form{
-        min-height: 50vh;
-        margin-bottom: 2vh;
+    #quick-link-icons img{
+        padding: 0px;
+    }
+    #quick-link-icons p{
+        color: #a0a0a0;
+        padding-right: 0px;
         font-size: 12px;
     }
  }
 
-  @media (min-width: 0px) and (max-width: 768px) {
+ @media (min-width: 0px) and (max-width: 991px) {
     #carousel-container{
         height: 75vw;
     }
+
+    #search-form{
+        margin-bottom: 40px;
+        font-size: 12px;
+    }
+
+    #carousel .carousel-info-box{
+        position: absolute;
+        height: auto;
+        color: white;
+        background-color: rgba(0,0,0,0.9);
+        bottom: 0;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+ }
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #carousel .carousel-info-box p:first-child{
+        font-size: 4vw;
+    }
+
+    #carousel .carousel-info-box p:last-child{
+        font-size: 2.5vw;
+    }
+    #carousel .carousel-links{
+        font-size: 2vw;
+    }
+
+    #title-bar div{
+        margin-top: 2vh;
+    }
+
+    #title-bar h2{
+        padding: 0;
+    }
+
+    #search-form .social-media-sm{
+        margin-top: 2vh;
+    }
+}
+@media (min-width: 0px) and (max-width: 767px) {
 
     //Square images for mobile
     #carousel-container img{
@@ -386,12 +478,12 @@ $width: calc((7/12)*100vw);
     }
 
     footer{
-        font-size: 1em;
+        font-size: 4vw;
+
     }
 
     footer .site-links{
         background-color: #0067AB;
-        font-size: 0.9em;
     }
 
     .site-links ul{
@@ -400,7 +492,16 @@ $width: calc((7/12)*100vw);
 
     .site-links li{
         padding: 5px;
+        height: 30px;
         border-bottom: 1px solid #2267EE;
+    }
+
+    #carousel .carousel-info-box p:first-child{
+        font-size: 5vw;
+    }
+
+    #carousel .carousel-info-box p:last-child{
+        font-size: 3vw;
     }
 
  }
@@ -417,4 +518,64 @@ $width: calc((7/12)*100vw);
     clear: both;
     width: 12em;
     font-size: 3.7vw;
+}
+
+#suggestion-box{
+    background-color: white;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    border: 1px solid #a0a0a0;
+    display: none;
+}
+
+#quick-links{
+    padding: 0;
+}
+#quick-link-icons div{
+    padding-right: 0px;
+    margin-bottom: 2vh;
+
+}
+
+#quick-link-icons .row{
+    max-width: 100%;
+}
+#quick-link-icons>div:hover{
+    box-shadow: 2px 2px 2px #a0a0a0;
+    border-radius: 5px;
+}
+
+#quick-link-icons h4{
+    color: black;
+    padding-right: 0px;
+}
+
+#quick-link-icons p{
+    color: #a0a0a0;
+    padding-right: 0px;
+}
+
+#quick-link-icons-xs div{
+    padding: 0;
+}
+
+#quick-link-icons-xs{
+    color: #606060;
+    padding: 0;
+}
+#quick-link-icons-xs h4{
+    font-size: 3.5vw;
+    margin: 0;
+}
+#quick-link-icons-xs h1{
+    font-size: 8vw;
+    margin: 0;
+}
+#quick-link-icons-xs p{
+    font-size: 2.5vw;
+}
+#quick-link-icons-xs>div{
+    margin-bottom: 15px;
 }

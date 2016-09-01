@@ -20,14 +20,7 @@ $(window).load ->
             else if($(window).width() > 768)
                 $("#carousel-container").css({"height":"calc(100vh-80px-60px)"});
                 
-            $border_bottom = $("#carousel").height() + "px solid rgba(1,1,1,0.8)";
-            $border_right = $("#carousel").width() + "px solid transparent";
-
-            $border_right_white =  (60*$("#carousel").width()) / $("#carousel").height();
-            $border_right_white = $border_right_white + "px solid transparent";
-
-            $("#triangle-bottomleft").css({"border-bottom":$border_bottom, "border-right":$border_right})
-            $("#triangle-bottomleft-white").css({"border-right":$border_right_white})
+            checkTriangles()
 
             console.log(max_index)
             prev_index = max_index-1;
@@ -35,12 +28,15 @@ $(window).load ->
                                                 $("#carousel-next").prop({"disabled":true})
                                                 console.log("Carousel Forward")
                                                 carouselNext()
+                                                checkTriangles()
                                                 
                                                 
             $("#carousel-previous").on "click", ->
                                                 $("#carousel-previous").prop({"disabled":true})
                                                 console.log("Carousel Backward")
-                                                carouselBack()  
+                                                carouselBack()
+                                                checkTriangles()
+
             $("#title-bar .sign-in-register-link").on "click", ->
                                                 $(".flip-container").slideToggle(400);
                                                 $(".flip-container").removeClass("flipped");
@@ -48,7 +44,9 @@ $(window).load ->
                                                 $(".flip-container").toggleClass("flipped");
 
 carouselNext = () ->
-                    console.log("Moving to next image")   
+                    console.log("Moving to next image")
+                    $($("#carousel .carousel-info-box")[active_index]).fadeOut(100).removeClass("active-info-box")   
+                    $($("#carousel .carousel-info-box")[next_index]).fadeIn(400).addClass("active-info-box")
                     $($("#carousel .carousel-image")[active_index]).animate({"margin-left": "100%"}, -> 
                                                                                                         $($("#carousel .carousel-image")).attr("style":"")
                                                                                                         changeValues(1)).removeClass("active")
@@ -58,7 +56,8 @@ carouselNext = () ->
 
 carouselBack = () ->
                     console.log("Moving to previous image")   
-                      
+                    $($("#carousel .carousel-info-box")[active_index]).fadeOut(100).removeClass("active-info-box")   
+                    $($("#carousel .carousel-info-box")[prev_index]).fadeIn(400).addClass("active-info-box")  
                     $($("#carousel .carousel-image")[active_index]).animate({"margin-left": "-100%"}, -> 
                                                                                                         $($("#carousel .carousel-image")).attr("style":"")
                                                                                                         changeValues(-1)).removeClass("active")
@@ -94,10 +93,35 @@ $(window).on "resize orientationChange", ->
                                 $("#carousel-container").css({"height":$("#info-container").height() + "px"});
                             else if($(window).width() > 768)
                                 $("#carousel-container").css({"height":"calc(100vh-80px-60px)"});
-                                
-                            $border_bottom = $("#carousel").height() + "px solid rgba(1,1,1,0.8)";
-                            $border_right = $("#carousel").width() + "px solid transparent";
-                            $border_right_white =  (60*$("#carousel").width()) / $("#carousel").height();
-                            $border_right_white = $border_right_white + "px solid transparent";
-                            $("#triangle-bottomleft").css({"border-bottom":$border_bottom, "border-right":$border_right})
-                            $("#triangle-bottomleft-white").css({"border-right":$border_right_white})
+
+                            checkTriangles()
+
+                            
+
+checkTriangles = () ->
+                    if($("#carousel .active").height() < $("#carousel").height())
+                        $border_bottom = $("#carousel .active").height()/2 + "px solid rgba(1,1,1,0.8)";
+                        $border_right = $("#carousel .active").width()/2 + "px solid transparent";
+
+                        $border_top = $("#carousel .active").height()/2 + "px solid transparent";
+                        $border_left = $("#carousel .active").width()/2 + "px solid rgba(0, 0, 0, 0.5)";
+
+                        $border_right_white =  (60*$("#carousel .active").width()) / $("#carousel .active").height();
+                        $border_right_white = $border_right_white + "px solid transparent";
+
+                        console.log("Jeez")
+                        $("#carousel .active-info-box").css({"bottom" : "" + $("#carousel").height() - $("#carousel .active").height() + "px"})
+                    else
+                        $border_bottom = $("#carousel").height()/2 + "px solid rgba(1,1,1,0.8)";
+                        $border_right = $("#carousel").width()/2 + "px solid transparent";
+
+                        $border_top = $("#carousel").height()/2 + "px solid transparent";
+                        $border_left = $("#carousel").width()/2 + "px solid rgba(0, 0, 0, 0.5)";
+
+                        $border_right_white =  (60*$("#carousel").width()) / $("#carousel").height();
+                        $border_right_white = $border_right_white + "px solid transparent";
+                        $("#carousel .active-info-box").css({"bottom" : "0px"})
+
+                    $("#triangle-bottomleft").css({"border-bottom":$border_bottom, "border-right":$border_right, "border-left": $border_left, "border-top": $border_top})
+                    $("#triangle-bottomleft-white").css({"border-right":$border_right_white})
+                    

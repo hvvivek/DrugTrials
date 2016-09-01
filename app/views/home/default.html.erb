@@ -1,121 +1,396 @@
 <%= render "menu" %>
-<div class="container-fluid" id="main-content">
 
-    <section class="col-md-7" id="carousel-container" >
+<div class = "container-fluid" 
+     id    = "main-content">
+
+    <section class = "col-md-7" 
+             id    = "carousel-container" >
+
         <%= render "carousel" %>
+
     </section>
 
+    
+    <section class = "col-md-5" 
+             id    = "info-container">
 
-    <section class="col-md-5" id="info-container">
-        <section id="title-bar">
-            <div class="hidden-xs sign-in-register col-md-12">
-                <span class="pull-right clearfix">
-                    <a class="sign-in-register-link">Sign In</a> | <a class="sign-in-register-link flipper-link"> Register</a>
+        <section id = "title-bar">
+
+            <div class = "hidden-xs 
+                          hidden-sm
+                          col-md-12 
+                          sign-in-register">
+                
+                <span class = "pull-right 
+                               clearfix">
+                    <a class = "sign-in-register-link">Sign In</a> | <a class = "sign-in-register-link flipper-link"> Register</a>
                 </span>
-                <div class="flip-container col-md-5">
-                    <div class="front-face">
-                        <form class="col-md-12">
+                
+                <div class = "flip-container 
+                              col-md-5">
 
-                            <div class="form-group">
-                                <label for="userName">Username</label>
-                                <input type="username" class="form-control" id="userName" placeholder="Username">
+                    <div class = "front-face">
+                        
+                        <form class = "col-md-12">
+
+                            <div class = "form-group">
+
+                                <label for = "userName">Username</label>
+                                <input type        = "username" 
+                                       class       = "form-control" 
+                                       id          = "userName" 
+                                       placeholder = "Username">
+
                             </div>
 
-                            <div class="form-group">
+                            <div class = "form-group">
+
                                 <label for="passWord">Password</label>
-                                <input type="password" class="form-control" id="passWord" placeholder="Password">
-                            </div>
-                            <div>
-                                <button type="submit" class="btn btn-default col-md-8 col-md-offset-2" id="landing-search">Login</button>
-                            </div>
-                        </form>
-                        <a class="flipper-link col-md-12">Not a member? Register Here ></a>
-                    </div>
-                    <div class="back-face">
-                        <form class="col-md-12">
+                                <input type        = "password" 
+                                       class       = "form-control" 
+                                       id          = "passWord" 
+                                       placeholder = "Password">
 
-                            <div class="form-group">
-                                <label for="email">Username</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                            
+                            <div>
+                                <button type  = "submit" 
+                                        class = "col-md-8 
+                                                 col-md-offset-2 
+                                                 btn 
+                                                 btn-default" 
+                                        id    = "landing-search">Login</button>
+                            </div>
+                        
+                        </form>
+                        
+                        <a class = "flipper-link 
+                                    col-md-12">
+                                Not a member? Register Here >
+                        </a>
+                    
+                    </div>
+                    
+                    <div class = "back-face">
+                        
+                        <form class = "col-md-12">
+
+                            <div class = "form-group">
+                                <label for = "email">Username</label>
+                                <input type        = "email" 
+                                       class       = "form-control" 
+                                       id          = "email" 
+                                       placeholder = "Email">
                             </div>
 
-                            <div class="form-group">
-                                <label for="passWord">Password</label>
-                                <input type="password" class="form-control" id="passWord" placeholder="Password">
+                            <div class = "form-group">
+                                <label for = "passWord">Password</label>
+                                <input type        = "password"  
+                                       class       = "form-control" 
+                                       id          = "passWord" 
+                                       placeholder = "Password">
                             </div>
-                            <div class="form-group">
-                                <label for="passWord-confirm">Confirm Password</label>
-                                <input type="password-confirm" class="form-control" id="passWord-confirm" placeholder="Re-type Password">
+                            
+                            <div class = "form-group">
+                                <label for = "passWord-confirm">Confirm Password</label>
+                                <input type        = "password-confirm" 
+                                       class       = "form-control" 
+                                       id          = "passWord-confirm" 
+                                       placeholder = "Re-type Password">
                             </div>
+                            
                             <div>
-                                <button type="submit" class="btn btn-default col-md-8 col-md-offset-2" id="landing-search">Register</button>
+                                <button type  = "submit" 
+                                        class = "col-md-8 
+                                                 col-md-offset-2
+                                                 btn 
+                                                 btn-default" 
+                                        id    = "landing-search">
+                                    Register
+                                </button>
                             </div>
+                        
                         </form>
-                        <a class="flipper-link col-md-12">Already a member? Sign In Here ></a>
+                        
+                        <a class = "flipper-link 
+                                    col-md-12">
+                                Already a member? Sign In Here >
+                        </a>
+                    
                     </div>
+                
                 </div>
                 
             </div>
-            <h2 class="text-center visible-xs visible-sm col-xs-12">Find Clinical Trial</h2>
-            <h5 class="text-muted visible-xs visible-sm col-xs-12 text-center">Search for a Clinical Trial near you</h5>
+            
+            <h2 class = "visible-xs 
+                         col-xs-12 
+                         text-center">
+                    Find Clinical Trial
+            </h2>
 
-            <h2 class="text-center visible-md visible-lg">Find Clinical Trial</h2>
-            <h5 class="text-center text-muted text-center visible-md visible-lg">Search for a Clinical Trial near you</h5>
+            <h5 class = "visible-xs 
+                         col-xs-12 
+                         text-muted 
+                         text-center">
+                    Search for a Clinical Trial near you
+            </h5>
+            
+            <div class = "visible-sm 
+                          col-sm-5">
+
+                <h2 class = "visible-sm 
+                             col-xs-12 
+                             text-center">
+                    Find Clinical Trial
+                </h2>
+
+                <h5 class = "visible-sm 
+                             col-xs-12 
+                             text-muted 
+                             text-center">
+                    Search for a Clinical Trial near you
+                </h5>
+
+            </div>
+            
+            <h2 class = "visible-md 
+                         visible-lg 
+                         text-center">
+                    Find Clinical Trial
+            </h2>
+            
+            <h5 class = "visible-md 
+                         visible-lg 
+                         text-muted 
+                         text-center">
+                    Search for a Clinical Trial near you
+            </h5>
+
         </section>
         
-        <section class="hidden-xs hidden-sm col-md-12 col-lg-10 col-lg-offset-1 info-bar"></section>
+        <section class = "hidden-xs 
+                          hidden-sm 
+                          col-md-12 
+                          col-lg-10 
+                          col-lg-offset-1 
+                          info-bar">
+        </section>
         
-        <form class="col-xs-11 
-                     col-sm-8 col-sm-offset-2 
-                     col-md-10 col-md-offset-1"  
-              id="search-form">
+        <section class = "visible-sm 
+                          col-sm-7 
+                          info-bar">
+        </section>
+        
+        <form class = "col-xs-11 
+                       col-sm-6 
+                       col-md-10 
+                       col-md-offset-1"  
+              id    = "search-form">
+
+            <%= image_tag 'location-placeholder.png',size: '20x35', class:'img-responsive location-placeholder' %> 
 
             <div class="form-group">
-                <label for="locationInput">Location</label>
-                <input type="location" 
-                       class="form-control" 
-                       id="locationInput" 
-                       placeholder="Eg - New Delhi, India">
+
+                <label for = "locationInput">Location</label>
+                <input type        = "location" 
+                       class       = "form-control" 
+                       id          = "locationInput" 
+                       placeholder = "Eg - New Delhi, India"
+                       style       = "width:85%">
+
             </div>
 
-            <div class="form-group">
-                <label for="healthConditionInput">Health Condition of Interest</label>
-                <input type="condition" class="form-control" id="healthConditionInput" placeholder="Eg - Diabetes">
+            <div class = "form-group">
+
+                <label for = "healthConditionInput">Health Condition of Interest</label>
+                <input type        = "condition" 
+                       class       = "form-control" 
+                       id          = "healthConditionInput" 
+                       placeholder = "Eg - Diabetes">
+                
+                <div id = "suggestion-box">
+                </div>
+
             </div>
+
             <div>
-                <button type="submit" class="btn btn-default col-xs-5 col-xs-offset-1 col-md-5 col-md-offset-1" id="landing-search">Search</button>
-                <a class="col-xs-6 col-md-6 pull-right">Advanced Search ></a>
+
+                <button type  = "submit" 
+                        class = "col-xs-5 
+                                 col-xs-offset-1 
+                                 col-md-5 
+                                 col-md-offset-1 
+                                 btn 
+                                 btn-default" 
+                        id    = "landing-search">
+                    Search
+                </button>
+                
+                <a class = "col-xs-6 
+                            col-md-6 
+                            pull-right">
+                    Advanced Search >
+                </a>
+
+            </div>
+            
+            <div class="visible-sm col-sm-12 social-media-sm">
+              <%= image_tag 'fb-icon', class: 'img-responsive col-sm-3' %>
+              <%= image_tag 'gplus-icon', class: 'img-responsive col-sm-3' %>
+              <%= image_tag 'twitter-icon', class: 'img-responsive col-sm-3' %>
+              <%= image_tag 'linkedin-icon', class: 'img-responsive col-sm-3' %>
             </div>
         </form>
 
-        <div class="col-md-12 hidden-xs hidden-sm" id="quick-link-icons">
-            <div  class="col-md-4">
-                <div class="center-block" style="text-align:center">
-                    <a href="#">
-                    <%= image_tag "cro", class: "media-object img-responsive-custom center-block"%>
-                    <h5 class="media-heading">For CROs</h5>
+        <div class = "col-sm-6 
+                      col-md-12 
+                      hidden-xs" 
+             id    = "quick-link-icons">
+
+            <div class = "col-sm-12 col-md-6">
+                <div class = "center-block">
+
+                    <a href = "#">
+                        <%= image_tag "cro", class: "col-sm-5
+                                                     media-object 
+                                                     img-responsive-custom 
+                                                     center-block" %>
+                        <div class="col-xs-7">
+                            <div class="row">
+                                <h4 class = "col-xs-12
+                                        media-heading">
+                                    Are you a CRO?
+                                </h4>
+                                <p class= "col-xs-12">
+                                    Find out how you can use this platform adn register trials.
+                                </p>
+                            </div>
+                        </div>
                     </a>
+
                 </div>
             </div>
 
-            <div  class="col-md-4">
-                <div class="center-block" style="text-align:center">
-                    <a href="#">
-                    <%= image_tag "physician", class: "media-object img-responsive-custom center-block"%>
-                    <h5 class="media-heading">For Physicians</h5>
+            <div  class = "col-sm-12 col-md-6">
+                <div class = "center-block">
+
+                    <a href = "#">
+                        <%= image_tag "physician", class: "col-sm-5
+                                                           media-object 
+                                                           img-responsive-custom 
+                                                           center-block" %>
+                        <div class="col-xs-7">
+                            <div class="row">
+                                <h4 class = "col-xs-12
+                                        media-heading">
+                                    For Physicians
+                                </h4>
+                                <p class= "col-xs-12">
+                                    Find out more about what we do and how we can help each other
+                                </p>
+                            </div>
+                        </div>
+
                     </a>
+
                 </div>
             </div>
 
-            <div  class="col-md-4">
-                <div class="center-block" style="text-align:center">
+            <div  class = "col-sm-12 col-md-6 col-md-offset-3">
+                <div class = "center-block">
+                    
                     <a href="#">
-                    <%= image_tag "physician", class: "media-object img-responsive-custom center-block"%>
-                    <h5 class="media-heading">For Volunteers</h5>
+                        <%= image_tag "physician", class: "col-xs-5
+                                                           media-object 
+                                                           img-responsive-custom 
+                                                           center-block"%>
+                        <div class="col-xs-7">
+                            <div class="row">
+                                <h4 class = "col-xs-12
+                                        media-heading">
+                                    For Volunteers
+                                </h4>
+                                <p class= "col-xs-12">
+                                    Find out how you can learn and contribute
+                                </p>
+                            </div>
+                        </div>
+                        
                     </a>
+
                 </div>
             </div>
         </div>
+
+        <div class = "col-xs-12
+                      visible-xs" 
+             id="quick-link-icons-xs">
+            
+            <div class = "col-xs-12">
+                
+                <h1 class = "col-xs-2">
+                    1
+                </h1>
+                
+                <div class = "col-xs-6">
+                    <h4>Search</h4>
+                    <p>Click here to start searching and book an appointment</p>
+                </div>
+                
+                <%= image_tag "cro", class: "img-responsive 
+                                             col-xs-4" %>
+
+            </div>
+
+            <div class = "col-xs-12">
+
+                <h1 class = "col-xs-2">
+                    2
+                </h1>
+                
+                <div class = "col-xs-6">
+                    <h4>Register</h4>
+                    <p>Click here to Register/Login</p>
+                </div>
+
+                <%= image_tag "physician", class: "img-responsive 
+                                                   col-xs-4" %>
+            
+            </div>
+
+            <div class = "col-xs-12">
+
+                <h1 class = "col-xs-2">
+                    3
+                </h1>
+                
+                <div class = "col-xs-6">
+                    <h4>Connect</h4>
+                    <p>Click here to connect with people on our forums</p>
+                </div>
+
+                <%= image_tag "cro", class: "img-responsive 
+                                             col-xs-4" %>
+            </div>
+
+            <div class = "col-xs-12">
+
+                <h1 class = "col-xs-2">
+                    4
+                </h1>
+                
+                <div class = "col-xs-6">
+                    <h4>Contact Us</h4>
+                    <p>Contact us for details/feedback</p>
+                </div>
+
+                <%= image_tag "cro", class: "img-responsive 
+                                             col-xs-4" %>
+            </div>
+            
+        </div>
+
     </section>
 
 </div>
