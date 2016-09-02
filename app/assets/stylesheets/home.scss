@@ -180,6 +180,7 @@ $width: calc((7/12)*100vw);
     background-image: image-url("Temp_Info_Bar.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position-x: 50%;
     margin-top: 3vh;
     margin-bottom: 1vh;
 }
@@ -547,7 +548,7 @@ $width: calc((7/12)*100vw);
     border-radius: 5px;
 }
 
-#quick-link-icons h4{
+#quick-link-icons h5{
     color: black;
     padding-right: 0px;
 }
